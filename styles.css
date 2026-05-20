@@ -130,7 +130,7 @@ button:hover{
   color: var(--secondary-color);
 }
 
-/* ---------- Mobile ---------- */
+
 
 @media (max-width: 600px){
 
