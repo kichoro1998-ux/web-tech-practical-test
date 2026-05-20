@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Practical Test — [Replace with your question title]</title>
+  <title>Customer Satisfaction Survey</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -11,75 +11,222 @@
   <!--
     ============================================================
     SUZA Web Technologies — Practical Test
-    Student Name      : [WRITE YOUR FULL NAME]
-    Registration No.  : [WRITE YOUR REG NUMBER]
-    Question Number   : Q[XXX]
-    Question Title    : [PASTE YOUR ASSIGNED QUESTION TITLE]
+    Student Name      : Mohd Mselem Abdalla
+    Registration No.  : 24BIT092
+    Question Number   : Q047
+    Question Title    : Customer Satisfaction Survey Form
 
-    YOUR TASK (paste from QUESTIONS.docx):
-    [PASTE THE FULL TASK DESCRIPTION FROM THE QUESTIONS DOCUMENT]
+    YOUR TASK:
+    Build a CUSTOMER SATISFACTION SURVEY. Include rating questions
+    using radio buttons (1–5 scale), multiple-choice questions
+    with checkboxes, an open feedback textarea, and a Submit button.
 
-    REQUIREMENTS FOR EVERY QUESTION:
-    1. Use semantic HTML5 (header, main, footer, section, article where appropriate).
-    2. Style everything in styles.css — NO inline styles, NO <style> tag.
-    3. Use Flexbox or CSS Grid for layout (whichever fits your component).
-    4. Include AT LEAST 2 images (use /assets/images/ or your own).
-    5. Include AT LEAST 2 working links (internal or external).
-    6. Add hover effects on interactive elements (links, buttons).
-    7. The page must look reasonable on mobile (add one media query).
-    8. No JavaScript required (HTML + CSS only).
     ============================================================
-  -->
+-->
 
   <header class="page-header">
-    <img src="assets/images/logo.svg" alt="SUZA logo" class="logo" width="56" height="56" />
-    <div>
-      <h1>Web Technologies — Practical Test</h1>
-      <p class="subtitle">State University of Zanzibar · SCCMS</p>
+
+    <div class="logo-area">
+      <img src="assets/images/logo.svg"
+           alt="SUZA logo"
+           class="logo" />
+
+      <div>
+        <h1>Customer Satisfaction Survey</h1>
+        <p class="subtitle">
+          State University of Zanzibar · SCCMS
+        </p>
+      </div>
     </div>
+
+    <nav>
+      <a href="#survey">Survey</a>
+
+      <a href="https://developer.mozilla.org/"
+         target="_blank"
+         rel="noopener noreferrer">
+         MDN Docs
+      </a>
+
+      <a href="https://www.suza.ac.tz"
+         target="_blank"
+         rel="noopener noreferrer">
+         SUZA
+      </a>
+    </nav>
+
   </header>
 
   <main>
-    <!-- ============================================================
-         REPLACE EVERYTHING INSIDE <main> WITH YOUR SOLUTION
-         ============================================================ -->
 
-    <section class="solution">
-      <h2>Your Solution Goes Here</h2>
-      <p>
-        Delete this placeholder and build the component described in your
-        assigned question. Remember: at least <strong>2 images</strong> and
-        <strong>2 links</strong>.
-      </p>
+    <section class="hero">
 
-      <img src="assets/images/banner.svg" alt="Sample banner — replace with your own content" />
+      <img src="assets/images/banner.svg"
+           alt="Customer feedback banner" />
 
-      <p>
-        Helpful reference:
-        <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">
-          MDN Web Docs
-        </a>
-        ·
-        <a href="https://massoudhamad.github.io/web-technologies/index.html" target="_blank" rel="noopener noreferrer">
-          Course site
-        </a>
-      </p>
+      <article class="hero-text">
+        <h2>Help Us Improve</h2>
+
+        <p>
+          We value your feedback. Please complete this survey
+          to help us improve our customer services.
+        </p>
+      </article>
+
+    </section>
+
+    <section class="survey-card" id="survey">
+
+      <form>
+
+        <fieldset>
+
+          <legend>Customer Information</legend>
+
+          <div class="form-group">
+
+            <label for="fullname">Full Name</label>
+
+            <input type="text"
+                   id="fullname"
+                   placeholder="Enter your full name"
+                   required />
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="email">Email Address</label>
+
+            <input type="email"
+                   id="email"
+                   placeholder="example@gmail.com"
+                   required />
+
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+
+          <legend>Rate Our Services</legend>
+
+          <p>How satisfied are you with our service?</p>
+
+          <div class="rating-group">
+
+            <label>
+              <input type="radio" name="rating" required />
+              1
+            </label>
+
+            <label>
+              <input type="radio" name="rating" />
+              2
+            </label>
+
+            <label>
+              <input type="radio" name="rating" />
+              3
+            </label>
+
+            <label>
+              <input type="radio" name="rating" />
+              4
+            </label>
+
+            <label>
+              <input type="radio" name="rating" />
+              5
+            </label>
+
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+
+          <legend>Services Used</legend>
+
+          <div class="checkbox-group">
+
+            <label>
+              <input type="checkbox" />
+              Online Shopping
+            </label>
+
+            <label>
+              <input type="checkbox" />
+              Customer Support
+            </label>
+
+            <label>
+              <input type="checkbox" />
+              Mobile App
+            </label>
+
+            <label>
+              <input type="checkbox" />
+              Delivery Service
+            </label>
+
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+
+          <legend>Additional Feedback</legend>
+
+          <label for="feedback">
+            Write your comments below:
+          </label>
+
+          <textarea id="feedback"
+                    rows="6"
+                    placeholder="Write your feedback here..."></textarea>
+
+        </fieldset>
+
+        <button type="submit">
+          Submit Survey
+        </button>
+
+      </form>
+
+    </section>
+
+    <section class="extra-image">
+
+      <img src="assets/images/hero.svg"
+           alt="Customer experience illustration" />
+
     </section>
 
   </main>
 
   <footer class="page-footer">
+
     <p>
-      Submitted by: <strong>[Your Name]</strong> ·
-      Reg No: <strong>[Your Reg No]</strong> ·
-      Question: <strong>Q[XXX]</strong>
+      Submitted by:
+      <strong>Mohd Mselem Abdalla</strong> ·
+      Reg No:
+      <strong>24BIT092</strong> ·
+      Question:
+      <strong>Q047</strong>
     </p>
+
     <p>
       <small>
-        © 2026 SUZA · Web Technologies (BCS / BITAM) ·
-        <a href="https://www.suza.ac.tz" target="_blank" rel="noopener noreferrer">suza.ac.tz</a>
+        © 2026 SUZA · Web Technologies ·
+        <a href="https://www.suza.ac.tz"
+           target="_blank"
+           rel="noopener noreferrer">
+           suza.ac.tz
+        </a>
       </small>
     </p>
+
   </footer>
 
 </body>
